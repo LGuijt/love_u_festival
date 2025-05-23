@@ -1,19 +1,30 @@
-
-    <div class="logo light">&#129505;u festival</div>
-    <div class="icons">
-      <div
-        class="dark-toggle light"
-        id="dark-toggle"
-        style="background-color: white"
-      >
-        <img src="assets/img/icons/light-dark.png" />
-      </div>
-      <div class="language light" id="language-toggle" onclick="toggleLang()"> 
-        <img
-          id="en-flag"
-          src="assets/img/icons/brit.png"
-          alt="british flag"
-        />
-        <img id="nl-flag" src="assets/img/icons/dutch.png" alt="dutch flag" />
-      </div>
-    </div>
+<div class="logo light">&#129505;u festival</div>
+<div class="icons">
+  <div
+    class="dark-toggle light"
+    id="dark-toggle"
+    style="background-color: white"
+  >
+    <img src="assets/img/icons/light-dark.png" />
+  </div>
+  <div class="language light" id="language-toggle" onclick="toggleLang()">
+    <img id="enFlag" src="assets/img/icons/brit.png" alt="british flag" />
+    <img id="nlFlag" src="assets/img/icons/dutch.png" alt="dutch flag" />
+  </div>
+  <script>
+    if (localStorage.getItem("lang") == null) {
+      localStorage.setItem("lang", "nl");
+      lang = "nl";
+    } else {
+      lang = localStorage.getItem("lang");
+    }
+    console.log(lang);
+    if (lang == "en") {
+      document.getElementById("enFlag").style.display = "block";
+      document.getElementById("nlFlag").style.display = "none";
+    } else {
+      document.getElementById("enFlag").style.display = "none";
+      document.getElementById("nlFlag").style.display = "block";
+    }
+  </script>
+</div>

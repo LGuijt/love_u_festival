@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#129505;u festival</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/style/schedule.css" />
+    <link
+      rel="icon"
+      href="assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <script>
+      navigator.serviceWorker.register("service-worker.js");
+    </script>
+    <link rel="manifest" href="manifest.json" />
+    <script src="header_and_footer.js" defer></script>
+    <script src="schedule.js" defer></script>
+  </head>
+  <body>
+    <header class="light" id="header"></header>
+    <main id="schedule-container">
+      <button class="tab-button" id="satButton" onclick="openTab(event, 'satTab');">Saturday</button>
+      <button class="tab-button" id="sunButton" onclick="openTab(event, 'sunTab')">Sunday</button>
+      <div class="tab" id="satTab">
+        <div class="times">
+          <div class="numbers">
+            <span class="time">10.00</span>
+            <span class="time">11.00</span>
+            <span class="time">12.00</span>
+            <span class="time">13.00</span>
+            <span class="time">14.00</span>
+            <span class="time">15.00</span>
+            <span class="time">16.00</span>
+            <span class="time">17.00</span>
+            <span class="time">18.00</span>
+            <span class="time">19.00</span>
+            <span class="time">20.00</span>
+            <span class="time">21.00</span>
+            <span class="time">22.00</span>
+            <span class="time">23.00</span>
+            <span class="time">00.00</span>
+          </div>
+          <div class="lines" id="lines"></div>
+        </div>
+        <div class="stages">
+          <div class="stage-container">
+            <div class="stage-name">Poton</div>
+            <div class="line-up-empty" id="satPoton"></div>
+          </div>
+          <div class="stage-container" >
+            <div class="stage-name">Club</div>
+            <div class="line-up-empty" id="satClub"></div>
+          </div>
+          <div class="stage-container" >
+            <div class="stage-name">Lake</div>
+            <div class="line-up-empty" id="satLake"></div>
+          </div>
+          <div class="stage-container" >
+            <div class="stage-name">Hangar</div>
+            <div class="line-up-empty" id="satHangar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab" id="sunTab">
+        <div class="times">
+          <div class="numbers">
+            <span class="time">10.00</span>
+            <span class="time">11.00</span>
+            <span class="time">12.00</span>
+            <span class="time">13.00</span>
+            <span class="time">14.00</span>
+            <span class="time">15.00</span>
+            <span class="time">16.00</span>
+            <span class="time">17.00</span>
+            <span class="time">18.00</span>
+            <span class="time">19.00</span>
+            <span class="time">20.00</span>
+            <span class="time">21.00</span>
+            <span class="time">22.00</span>
+            <span class="time">23.00</span>
+          </div>
+          <div class="lines" id="sunLines"></div>
+        </div>
+        <div class="stages">
+          <div class="stage-container" >
+            <div class="stage-name">Poton</div>
+            <div class="line-up-empty" id="sunPoton"></div>
+          </div>
+          <div class="stage-container" >
+            <div class="stage-name">Club</div>
+            <div class="line-up-empty" id="sunClub"></div>
+          </div>
+          <div class="stage-container" >
+            <div class="stage-name">Lake</div>
+            <div class="line-up-empty" id="sunLake"></div>
+          </div>
+          <div class="stage-container" >
+            <div class="stage-name">Hangar</div>
+            <div class="line-up-empty" id="sunHangar"></div>
+          </div>
+        </div>
+    </main>
+    <footer class="light" id="footer"></footer>
+  </body>
+</html>

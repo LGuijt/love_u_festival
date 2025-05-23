@@ -73,7 +73,7 @@ header .dark {
 .language img {
   width: 100%;
 }
-.language #en-flag {
+.language #enFlag {
   display: none;
 }
 
@@ -122,10 +122,10 @@ footer a {
 main {
   grid-area: main;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 5vh;
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 .block {

@@ -1,0 +1,56 @@
+@font-face {
+  font-family: sans-light;
+  src: url(fonts/Sansation-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: sans-regular;
+  src: url(fonts/Sansation-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: sans-bold;
+  src: url(fonts/Sansation-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+.accordion {
+  background-color: #247BA0;
+  color: #ffffff;
+  font-family: sans-light;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+}
+.accordion.active {
+  background-color: #F03228;
+}
+
+.panel {
+  margin-top: 3vh;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-family: sans-regular;
+  font-size: 1.4rem;
+  color: #000000;
+  border-radius: 15px;
+}
+.panel.open {
+  display: block;
+}
+.panel h4 {
+  font-size: 2rem;
+  font-family: sans-bold;
+  color: #247BA0;
+  margin: 0;
+}
+
+.accordion-container {
+  margin-bottom: 1vh;
+}/*# sourceMappingURL=faq.css.map */
