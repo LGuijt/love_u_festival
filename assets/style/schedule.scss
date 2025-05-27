@@ -1,104 +1,154 @@
 @import "_global";
 
-
-#schedule-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    grid-template-rows: 8vh auto;
-    padding: 1vh;
-    gap: 1vh;
+#schedule-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-rows: 8vh auto;
+  padding: 1vh;
+  gap: 1vh;
 }
 
+.tab-button {
+  background-color: $color-accent;
+  color: $color-base;
+  border: none;
+  font-family: sans-light;
+  font-size: 1.5rem;
+  border-radius: 20px;
 
-.tab-button{
-    background-color: $color-accent;
+  &.active {
+    background-color: $color-secondary;
+  }
+}
+
+.tab {
+  grid-column: 1 / span 2;
+  overflow-x: scroll;
+  position: relative;
+  display: none;
+}
+
+.times {
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 9fr;
+  padding-left: 25vw;
+}
+
+.numbers {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: repeat(14, 32vh) auto;
+  font-family: sans-bold;
+  color: $color-secondary;
+  font-size: 1.5rem;
+}
+
+.lines {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: repeat(57, 8vh) auto;
+}
+
+.line {
+  border-left: gray 1px solid;
+  height: 100%;
+}
+
+.stages {
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  width: auto;
+  height: 90%;
+}
+
+.stage-container {
+  display: grid;
+  grid-template-columns: 25vw auto;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.stage-name {
+  font-family: sans-bold;
+  font-size: 1.5rem;
+  color: $color-secondary;
+  justify-self: flex-end;
+  padding-right: 2vw;
+}
+
+.line-up-empty {
+  display: grid;
+  grid-template-columns: repeat(57, 8vh) auto;
+  grid-template-rows: 1fr;
+  height: 10vh;
+
+  .line-up-item {
+    background-color: $color-info;
     color: $color-base;
-    border: none;
     font-family: sans-light;
     font-size: 1.5rem;
     border-radius: 20px;
-
-    .active{
-        background-color: $color-secondary;
-    }
+    text-align: center;
+    padding: 3vh;
+    margin: 3px;
+    max-height: 8vh;
+  }
 }
 
-.tab{
-    grid-column: 1 / span 2;
-    overflow-x: scroll;
-    position: relative;
-    display: none;
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.times{
-    display: grid;
-    height: 100%;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 9fr;
-    padding-left: 25vw;
+/* The actual popup (appears on top) */
+.popup .popup-content {
+  visibility: hidden;
+  background-color: $color-base;
+  color: $color-secondary;
+  border: 3px solid $color-secondary;
+  text-align: center;
+  border-radius: 20px;
+  padding: 0 1vh;
+  position: absolute;
+  z-index: 1000;
+  bottom: -50%;
+  left: 50%;
+  margin-left: -80px;
+  box-shadow: 1px 1px 5px #000;
+  text-decoration: none;
 }
 
-.numbers{
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: repeat(14, 32vh) auto;
-    font-family: sans-bold;
-    color: $color-secondary;
-    font-size: 1.5rem;
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
-.lines{
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: repeat(57, 8vh) auto;
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.line{
-    border-left: gray 1px solid;
-    height: 100%;
-}
-
-.stages{
-    position: absolute;
-    top: 5vh;
-    left: 0;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    width: auto;
-    height: 90%;
-}
-
-.stage-container{
-    display: grid;
-    grid-template-columns: 25vw auto;
-    grid-template-rows: 1fr;
-    align-items: center;
-}
-
-.stage-name{
-    font-family: sans-bold;
-    font-size: 1.5rem;
-    color: $color-secondary;
-    justify-self: flex-end;
-    padding-right: 2vw;
-}
-
-.line-up-empty{
-    display: grid;
-    grid-template-columns: repeat(57, 8vh) auto;
-    grid-template-rows: 1fr;
-    height: 10vh;
-
-    .line-up-item{
-        background-color: $color-info;
-        color: $color-base;
-        font-family: sans-light;
-        font-size: 1.5rem;
-        border-radius: 20px;
-        text-align: center;
-        padding: 3vh;
-        margin: 3px;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

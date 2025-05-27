@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#129505;u festival</title>
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="assets/style/lineup.css" />
+    <link
+      rel="icon"
+      href="assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <script>
+      navigator.serviceWorker.register("service-worker.js");
+    </script>
+    <link rel="manifest" href="manifest.json" />
+    <script src="header_and_footer.js" defer></script>
+    <script src="lineup.js" defer></script>
+  </head>
+  <body>
+    <header class="light" id="header"></header>
+    <main id="lineup">
+      <h1>Lineup</h1>
+      <div class="filters">
+        <div class="filter-buttons">
+          <button id="day" class="filter-button active">Day</button>
+          <button id="stage" class="filter-button">Stage</button>
+          <button id="type" class="filter-button">type</button>
+        </div>
+        <div class="filter-options">
+          <div id="day-options" class="filter-option active hidden">
+            <button class="option-button" onclick="filters('day', 'all')">All</button>
+            <button class="option-button" onclick="filters('day', 0)">Saturday</button>
+            <button class="option-button" onclick="filters('day', 1)">Sunday</button>
+          </div>
+          <div id="stage-options" class="filter-option hidden">
+            <button class="option-button" onclick="filters('stage', 'all')">All</button>
+            <button class="option-button" onclick="filters('stage', 0)">Ponton</button>
+            <button class="option-button" onclick="filters('stage', 1)">Club</button>
+            <button class="option-button" onclick="filters('stage', 2)">Lake</button>
+            <button class="option-button" onclick="filters('stage', 3)">Hangar</button>
+          </div>
+          <div id="type-options" class="filter-option hidden">
+            <button class="option-button" onclick="filters('type', 'all')">All</button>
+            <button class="option-button" onclick="filters('type', 0)">Band</button>
+            <button class="option-button" onclick="filters('type', 1)">DJ</button>
+            <button class="option-button" onclick="filters('type', 2)">Solo</button>
+            <button class="option-button" onclick="filters('type', 3)">Misc.</button>
+            <button class="option-button" onclick="filters('type', 4)">Other Acts</button>
+          </div>
+      </div>
+        </div>
+      <div id="lineup-container"></div>
+    </main>
+    <footer class="light" id="footer"></footer>
+  </body>
+</html>

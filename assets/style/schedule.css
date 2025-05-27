@@ -29,7 +29,7 @@
   font-size: 1.5rem;
   border-radius: 20px;
 }
-.tab-button .active {
+.tab-button.active {
   background-color: #247BA0;
 }
 
@@ -110,4 +110,46 @@
   text-align: center;
   padding: 3vh;
   margin: 3px;
+  max-height: 8vh;
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popup-content {
+  visibility: hidden;
+  background-color: #ffffff;
+  color: #247BA0;
+  border: 3px solid #247BA0;
+  text-align: center;
+  border-radius: 20px;
+  padding: 0 1vh;
+  position: absolute;
+  z-index: 1000;
+  bottom: -50%;
+  left: 50%;
+  margin-left: -80px;
+  box-shadow: 1px 1px 5px #000;
+  text-decoration: none;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=schedule.css.map */

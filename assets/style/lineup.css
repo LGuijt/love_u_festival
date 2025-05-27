@@ -1,0 +1,76 @@
+@font-face {
+  font-family: sans-light;
+  src: url(fonts/Sansation-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: sans-regular;
+  src: url(fonts/Sansation-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: sans-bold;
+  src: url(fonts/Sansation-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+h1 {
+  margin-bottom: 1vh;
+}
+
+.line-up-item {
+  display: grid;
+  background-color: #E3B505;
+  color: #ffffff;
+  font-family: sans-light;
+  font-size: 1.1em;
+  margin-bottom: 1vh;
+  text-decoration: none;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.filters {
+  display: grid;
+  grid-template-rows: 5vh auto;
+  margin-bottom: 3vh;
+  position: sticky;
+  top: 0;
+}
+
+.filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.1em;
+}
+
+.filter-options {
+  display: grid;
+  grid-gap: 0.5em;
+  width: 100%;
+}
+
+.filter-options {
+  z-index: 1000;
+  position: absolute;
+  top: 5vh;
+}
+
+.filter-option {
+  display: grid;
+  opacity: 0.8;
+}
+
+button {
+  background-color: #F03228;
+  color: #ffffff;
+  font-family: sans-regular;
+  font-size: 1.2em;
+  padding: 0.5em;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=lineup.css.map */
