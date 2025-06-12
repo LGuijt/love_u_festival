@@ -13,6 +13,11 @@
   src: url(fonts/Sansation-Bold.ttf) format("truetype");
   font-weight: 700;
 }
+main .dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .accordion {
   background-color: #247BA0;
   color: #ffffff;
@@ -35,10 +40,8 @@
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #ffffff;
   font-family: sans-regular;
   font-size: 1.4rem;
-  color: #000000;
   border-radius: 15px;
 }
 .panel.open {

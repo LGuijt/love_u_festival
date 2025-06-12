@@ -1,0 +1,129 @@
+{
+    "paginas": [
+        {
+            "name" : "footer",
+            "teksten": [
+                {
+                    "naam": "footerText1",
+                    "en": "Home",
+                    "nl": "Home"
+                },
+                {
+                    "naam": "footerText2",
+                    "en": "Info",
+                    "nl": "Info"
+                },
+                {
+                    "naam": "footerText3",
+                    "en": "Schedule",
+                    "nl": "Schema"
+                },
+                {
+                    "naam": "footerText4",
+                    "en": "Line up",
+                    "nl": "Line-up"
+                },
+                {
+                    "naam": "footerText5",
+                    "en": "Map",
+                    "nl": "Kaart"
+                }
+            ]
+        },
+        {
+            "name" : "index",
+            "teksten": [
+                {
+                    "naam" : "welcome",
+                    "en": "Welcome to &#129505;u festival!",
+                    "nl": "Welkom op &#129505;u festival!"
+                },
+                {
+                    "naam" : "onNow",
+                    "en": "On now:",
+                    "nl": "Nu bezig:"
+                },
+                {
+                    "naam" : "upcoming",
+                    "en": "Upcoming:",
+                    "nl": "Komt eraan:"
+                },
+                {
+                    "naam" : "qrCodeBox",
+                    "en": "Scan the QR code to get the app! Or check out the website at <a href=\"https://u230067/loveufestival.com\">loveufestival.com</a>",
+                    "nl": "Scan de QR-code om de app te krijgen! Of bekijk de website op <a href=\"https://u230067/loveufestival.com\">loveufestival.com</a>"
+                }
+            ]
+        },
+        {
+            "name" : "schedule",
+            "teksten": [
+                {
+                    "naam": "satButton",
+                    "en": "Saturday",
+                    "nl": "Zaterdag"
+                },
+                {
+                    "naam": "sunButton",
+                    "en": "Sunday",
+                    "nl": "Zondag"
+                }
+            ]
+        },
+        {
+            "name" : "lineup",
+            "teksten": [
+                {
+                    "naam": "lineupTitle",
+                    "en": "Line up",
+                    "nl": "Line-up"
+                },
+                {
+                    "naam": "day",
+                    "en": "Day",
+                    "nl": "Dag"
+                },
+                {
+                    "naam": "stage",
+                    "en": "Stage",
+                    "nl": "Podium"
+                }
+            ]
+        },
+        {
+            "name" : "acts",
+            "teksten": [
+                {
+                    "naam": "back-button",
+                    "en": "&#129044; Back",
+                    "nl": "&#129044; Terug"
+                }
+            ]
+        },
+        {
+            "name" : "map",
+            "teksten": [
+                {
+                    "naam": "legend1",
+                    "en": "Food",
+                    "nl": "Eten"
+                },
+                {
+                    "naam": "legend2",
+                    "en": "Toilet",
+                    "nl": "WC"
+                },
+                {
+                    "naam": "legend3",
+                    "en": "First Aid",
+                    "nl": "EHBO"
+                },
+                {
+                    "naam": "legend4",
+                    "en": "Entrance",
+                    "nl": "Ingang"
+                }
+            ]
+        }
+    ]
+}

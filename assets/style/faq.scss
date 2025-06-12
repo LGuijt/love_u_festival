@@ -1,46 +1,50 @@
 @import "_global";
 
-.accordion {
-    background-color: $color-secondary;
+main {
+  .dark {
+    background-color: $color-primary;
     color: $color-base;
-    font-family: sans-light;
-    font-size: 1.8rem;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    border-radius: 15px;
-    outline: none;
-  
-    &.active {
-      background-color: $color-accent;
-    }
   }
-  
-  .panel {
-      margin-top: 3vh;
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: $color-base;
-    font-family: sans-regular;
-    font-size: 1.4rem;
-    color: $color-primary;
-    border-radius: 15px;
-    &.open {
-      display: block;
-    }
-  
-    h4{
-      font-size: 2rem;
-      font-family: sans-bold;
-      color: $color-secondary;
-      margin: 0;
-    }
+}
+
+.accordion {
+  background-color: $color-secondary;
+  color: $color-base;
+  font-family: sans-light;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+
+  &.active {
+    background-color: $color-accent;
   }
-  
-  .accordion-container {
-    margin-bottom: 1vh;
+}
+
+.panel {
+  margin-top: 3vh;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  font-family: sans-regular;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  &.open {
+    display: block;
   }
-  
+
+  h4 {
+    font-size: 2rem;
+    font-family: sans-bold;
+    color: $color-secondary;
+    margin: 0;
+  }
+}
+
+.accordion-container {
+  margin-bottom: 1vh;
+}

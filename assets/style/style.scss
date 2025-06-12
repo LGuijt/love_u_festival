@@ -1,8 +1,6 @@
 @import "_global";
 
 body {
-  background-color: $color-base;
-  color: $color-primary;
   font-family: sans-regular;
   font-size: 16px;
   display: grid;
@@ -15,11 +13,23 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+
+  .light {
+    background-color: $color-base;
+    color: $color-primary;
+  }
+
+  .dark {
+    background-color: $color-primary;
+    color: $color-base;
+  }
 }
 
 header {
   grid-area: header;
-  display: flex;
+  display: grid;
+  grid-template-columns: 75vw 25vw;
+  grid-template-rows: 8vh 2vh;
   justify-content: space-around;
   align-items: center;
   font-size: 2rem;
@@ -48,7 +58,36 @@ header {
   width: 25vw;
 }
 
-.dark-toggle {
+.ticker-container {
+  grid-column: 1 / span 2;
+  font-family: sans-light;
+  font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: $color-accent;
+  color: $color-base;
+  height: 4vh;
+}
+
+.headerBanner {
+  display: inline-block;
+  span {
+    margin: 0 0.5rem;
+  }
+  animation: ticker 15s linear infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#colorToggle {
   height: 5vh;
   width: 5vh;
   border-radius: 50%;
@@ -104,10 +143,17 @@ footer {
   flex-direction: column;
   width: 100%;
   height: 100%;
+
+  p {
+    font-size: 1.1rem;
+    font-family: sans-regular;
+    color: $color-accent;
+    margin: 0;
+  }
 }
 
 .button {
-  border: 2px solid $color-primary;
+  border: 2px solid $color-accent;
   border-radius: 10px;
   height: 5vh;
   width: 5vh;
@@ -128,9 +174,11 @@ main {
 }
 
 .block {
-  border: 2px solid $color-primary;
   padding: 2vh;
   border-radius: 10px;
+  border: 1px solid $color-secondary;
+  box-shadow: 1px 1px 5px rgba(77, 73, 73, 1);
+  margin-bottom: 2vh;
 }
 
 #welcome {
@@ -145,3 +193,47 @@ h1 {
   color: $color-secondary;
 }
 
+.acts-list {
+  h2 {
+    font-size: 2rem;
+    font-family: sans-bold;
+    margin: 0;
+    color: $color-secondary;
+    border-bottom: 1px solid $color-secondary;
+  }
+
+  .nuBezigContent, .nuKomtContent {
+    display: grid;
+    grid-template-rows: 1fr;
+    color: $color-base;
+    gap: 1vh;
+    margin-top: 1vh;
+
+    p {
+      background-color: $color-info;
+      margin: 0;
+      font-family: sans-light;
+      height: 5vh;
+      box-shadow: inset 1px 1px 5px rgba(77, 73, 73, 0.5);
+      padding-top: 2vh;
+      padding-left: 1vh;
+    }
+  }
+}
+
+#qrCodeImage{
+  width: 70vw;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin-left: 2vw;
+}
+
+#qrCodeBox{
+  font-family: sans-light;
+  font-size: 1.2rem;
+  margin: 2vh;
+  a {
+    text-decoration: none;
+    color: $color-accent;
+  }
+}

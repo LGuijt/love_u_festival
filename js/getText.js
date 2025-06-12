@@ -9,14 +9,12 @@ if (localStorage.getItem("lang") == null) {
 
 function toggleLang() {
   if (lang == "nl") {
-    console.log("Switching to English");
     localStorage.setItem("lang", "en");
     lang = "en";
     document.getElementById("nlFlag").style.display = "none";
     document.getElementById("enFlag").style.display = "block";
     getText();
   } else {
-    console.log("Switching to Dutch");
     localStorage.setItem("lang", "nl");
     document.getElementById("nlFlag").style.display = "block";
     document.getElementById("enFlag").style.display = "none";
@@ -27,7 +25,7 @@ function toggleLang() {
 
 async function getParent(id) {
   const res = await fetch(
-    "functions/getParent.php?id=" + id + "&lang=" + lang,
+    "../functions/getParent.php?id=" + id + "&lang=" + lang,
     {
       method: "POST",
       headers: {
@@ -47,7 +45,7 @@ async function getParent(id) {
 }
 
 async function getChild(id) {
-  const res = await fetch("functions/getData.php?id=" + id + "&lang=" + lang, {
+  const res = await fetch("../functions/getData.php?id=" + id + "&lang=" + lang, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

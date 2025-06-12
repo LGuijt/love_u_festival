@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#129505;u festival</title>
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/map.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      rel="icon"
+      href="../assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <script>
+      navigator.serviceWorker.register("../service-worker.js");
+    </script>
+    <link rel="manifest" href="../manifest.json" />
+    <script src="../js/header_and_footer.js" defer></script>
+    <script src="../js/map.js" defer></script>
+    <script src="../js/app.js" defer></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <header class="toggle" id="header"></header>
+    <main class="map-container toggle">
+      <div class="legend">
+        <ul>
+          <li><img src="../assets/img/map/ponton.svg" /><span>Ponton</span></li>
+          <li><img src="../assets/img/map/club.svg" /><span>Club</span></li>
+          <li><img src="../assets/img/map/lake.svg" /><span>Lake</span></li>
+          <li><img src="../assets/img/map/hangar.svg" /><span>Hangar</span></li>
+          <li><img src="../assets/img/map/food.svg" /><span id="legend1">Food</span></li>
+          <li><img src="../assets/img/map/bar.svg" /><span>Bar</span></li>
+          <li><img src="../assets/img/map/toilet.svg" /><span id="legend2">Toilet</span></li>
+          <li><img src="../assets/img/map/ehbo.svg" /><span id="legend3">EHBO</span></li>
+          <li><img src="../assets/img/map/locker.svg" /><span>Locker</span></li>
+          <li>
+            <img src="../assets/img/map/merch.svg" /><span>Merchandise</span>
+          </li>
+          <li>
+            <img src="../assets/img/map/ingang.svg" style="height: 2vh;"/><span id="legend4">Entrance</span>
+          </li>
+        </ul>
+      </div>
+      <div id="map"></div>
+    </main>
+    <footer class="toggle" id="footer"></footer>
+  </body>
+</html>

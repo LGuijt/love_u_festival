@@ -4,28 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>&#129505;u festival</title>
-    <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="assets/style/schedule.css" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/schedule.css" />
     <link
       rel="icon"
-      href="assets/img/logos/logoblack.png"
+      href="../assets/img/logos/logoblack.png"
       type="image/x-icon"
     />
     <link
       rel="apple-touch-icon"
-      href="assets/img/logos/logoblack.png"
+      href="../assets/img/logos/logoblack.png"
       type="image/x-icon"
     />
     <script>
-      navigator.serviceWorker.register("service-worker.js");
+      navigator.serviceWorker.register("../service-worker.js");
     </script>
-    <link rel="manifest" href="manifest.json" />
-    <script src="header_and_footer.js" defer></script>
-    <script src="schedule.js" defer></script>
+    <link rel="manifest" href="../manifest.json" />
+    <script src="../js/header_and_footer.js" defer></script>
+    <script src="../js/schedule.js" defer></script>
+    <script src="../js/app.js" defer></script>
   </head>
   <body>
-    <header class="light" id="header"></header>
-    <main id="schedule-container">
+    <header class="toggle" id="header"></header>
+    <main id="schedule-container" class="toggle">
       <button class="tab-button" id="satButton" onclick="openTab(event, 'satTab');">Saturday</button>
       <button class="tab-button" id="sunButton" onclick="openTab(event, 'sunTab')">Sunday</button>
       <div class="tab" id="satTab">
@@ -106,6 +107,6 @@
           </div>
         </div>
     </main>
-    <footer class="light" id="footer"></footer>
+    <footer class="toggle" id="footer"></footer>
   </body>
 </html>

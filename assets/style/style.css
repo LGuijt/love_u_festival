@@ -14,8 +14,6 @@
   font-weight: 700;
 }
 body {
-  background-color: #ffffff;
-  color: #000000;
   font-family: sans-regular;
   font-size: 16px;
   display: grid;
@@ -26,10 +24,20 @@ body {
   margin: 0;
   padding: 0;
 }
+body .light {
+  background-color: #ffffff;
+  color: #000000;
+}
+body .dark {
+  background-color: #000000;
+  color: #ffffff;
+}
 
 header {
   grid-area: header;
-  display: flex;
+  display: grid;
+  grid-template-columns: 75vw 25vw;
+  grid-template-rows: 8vh 2vh;
   justify-content: space-around;
   align-items: center;
   font-size: 2rem;
@@ -56,12 +64,40 @@ header .dark {
   width: 25vw;
 }
 
-.dark-toggle {
+.ticker-container {
+  grid-column: 1/span 2;
+  font-family: sans-light;
+  font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: #F03228;
+  color: #ffffff;
+  height: 4vh;
+}
+
+.headerBanner {
+  display: inline-block;
+  animation: ticker 15s linear infinite;
+}
+.headerBanner span {
+  margin: 0 0.5rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#colorToggle {
   height: 5vh;
   width: 5vh;
   border-radius: 50%;
 }
-.dark-toggle img {
+#colorToggle img {
   width: 100%;
   height: 100%;
 }
@@ -107,9 +143,15 @@ footer a {
   width: 100%;
   height: 100%;
 }
+.button-container p {
+  font-size: 1.1rem;
+  font-family: sans-regular;
+  color: #F03228;
+  margin: 0;
+}
 
 .button {
-  border: 2px solid #000000;
+  border: 2px solid #F03228;
   border-radius: 10px;
   height: 5vh;
   width: 5vh;
@@ -129,9 +171,11 @@ main {
 }
 
 .block {
-  border: 2px solid #000000;
   padding: 2vh;
   border-radius: 10px;
+  border: 1px solid #247BA0;
+  box-shadow: 1px 1px 5px rgb(77, 73, 73);
+  margin-bottom: 2vh;
 }
 
 #welcome {
@@ -144,4 +188,45 @@ h1 {
   text-align: center;
   margin: 0;
   color: #247BA0;
+}
+
+.acts-list h2 {
+  font-size: 2rem;
+  font-family: sans-bold;
+  margin: 0;
+  color: #247BA0;
+  border-bottom: 1px solid #247BA0;
+}
+.acts-list .nuBezigContent, .acts-list .nuKomtContent {
+  display: grid;
+  grid-template-rows: 1fr;
+  color: #ffffff;
+  gap: 1vh;
+  margin-top: 1vh;
+}
+.acts-list .nuBezigContent p, .acts-list .nuKomtContent p {
+  background-color: #E3B505;
+  margin: 0;
+  font-family: sans-light;
+  height: 5vh;
+  box-shadow: inset 1px 1px 5px rgba(77, 73, 73, 0.5);
+  padding-top: 2vh;
+  padding-left: 1vh;
+}
+
+#qrCodeImage {
+  width: 70vw;
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-left: 2vw;
+}
+
+#qrCodeBox {
+  font-family: sans-light;
+  font-size: 1.2rem;
+  margin: 2vh;
+}
+#qrCodeBox a {
+  text-decoration: none;
+  color: #F03228;
 }/*# sourceMappingURL=style.css.map */

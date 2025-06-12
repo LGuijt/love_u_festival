@@ -8,6 +8,8 @@ let sunPoton = document.getElementById("sunPoton");
 let sunClub = document.getElementById("sunClub");
 let sunLake = document.getElementById("sunLake");
 let sunHangar = document.getElementById("sunHangar");
+let time = localStorage.getItem("time");
+let day = localStorage.getItem("day");
 
 for (let i = 0; i < 58; i++) {
   const line = document.createElement("div");
@@ -24,7 +26,7 @@ if (localStorage.getItem("lang") == null) {
 }
 
 async function getSchedule() {
-  const res = await fetch("functions/getSchedule.php?lang=" + lang, {
+  const res = await fetch("../functions/getSchedule.php?lang=" + lang, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -67,7 +69,7 @@ async function makeSchedule() {
 
     //create a popup div with the name and description of the artist
     let popup = document.createElement("a");
-    popup.className = "popup-content";
+    popup.className = "popup-content toggle";
     popup.id = "popup" + e.id;
     popup.innerHTML = "<p>" + e.name + "</p><p>" + e.short + "</p>";
     popup.href = "act.html?id=" + e.id;
@@ -202,4 +204,14 @@ function openTab(evt, day) {
   evt.currentTarget.className += " active";
 }
 
+if (day == null) {
+  day = localStorage.getItem("day");
+}
+
+if (day == null || day == 0) {
 document.getElementById("satButton").click();
+}
+else if (day == 1) {
+  document.getElementById("sunButton").click();
+}
+

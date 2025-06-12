@@ -80,6 +80,22 @@
   height: 90%;
 }
 
+.current-time {
+  position: absolute;
+  top: 5vh;
+  left: 25vw;
+  width: 448vh;
+  z-index: 1000;
+  height: 90%;
+}
+
+#currentTime {
+  border: 1px solid #F03228;
+  background-color: #F03228;
+  height: 100%;
+  width: 1px;
+}
+
 .stage-container {
   display: grid;
   grid-template-columns: 25vw auto;

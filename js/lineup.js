@@ -21,7 +21,7 @@ if (localStorage.getItem("lang") == null) {
 }
 
 async function getSchedule() {
-  const res = await fetch("functions/getSchedule.php?lang=" + lang, {
+  const res = await fetch("../functions/getSchedule.php?lang=" + lang, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

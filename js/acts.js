@@ -3,8 +3,6 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 let main = document.getElementById('acts');
 
-console.log(id);
-
 if (localStorage.getItem('lang') == null) {
     localStorage.setItem('lang', 'nl');
     lang = 'nl';
@@ -13,10 +11,9 @@ else {
     lang = localStorage.getItem('lang');
 }
 
-console.log(lang);
 
 async function getAct() {
-    const res = await fetch('functions/getAct.php?id=' + id + '&lang=' + lang, {
+    const res = await fetch('../functions/getAct.php?id=' + id + '&lang=' + lang, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -36,9 +33,8 @@ async function getAct() {
 
 async function makeAct() {
     const data = await getAct();
-    console.log(data);
     img = document.createElement('img');
-    img.src = 'assets/img/acts/' + data.img;
+    img.src = '../assets/img/acts/' + data.img;
     main.appendChild(img);
 
     let name = document.createElement('h1');

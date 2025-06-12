@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#129505;u festival</title>
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link
+      rel="icon"
+      href="../assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../assets/img/logos/logoblack.png"
+      type="image/x-icon"
+    />
+    <script>
+      navigator.serviceWorker.register("../service-worker.js");
+    </script>
+    <link rel="manifest" href="../manifest.json" />
+    <script src="../js/header_and_footer.js" defer></script>
+    <script src="../js/app.js" defer></script>
+  </head>
+  <body class="toggle">
+    <header class="toggle" id="header"></header>
+    <main class="toggle">
+      <div class="block toggle">
+        <h1 id="welcome">Welcome to &#129505;u festival</h1>
+      </div>
+      <div class="block acts-list toggle">
+        <h2 id="onNow"></h2>
+        <div class="nuBezigContent toggle" id="homePageBox"></div>
+      </div>
+      <div class="block acts-list toggle">
+        <h2 id="upcoming"></h2>
+        <div class="nuKomtContent toggle" id="upcomingActsBox"></div>
+      </div>
+      <div class="block qr-code toggle">
+        <div class="qrCodeContent toggle" id="qrCodeBox"></div>
+        <img
+          class="qrCodeImage toggle"
+          id="qrCodeImage"
+          src="../assets/img/qr.png"
+          alt="QR Code">
+      </div>
+    </main>
+    <footer class="toggle" id="footer"></footer>
+  </body>
+</html>
